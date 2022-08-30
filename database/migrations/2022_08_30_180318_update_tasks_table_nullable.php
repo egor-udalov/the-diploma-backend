@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\DBAL\TimestampType;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -13,10 +14,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
+        Schema::table('tasks', function (Blueprint $table) {
+            $table->string('name')->nullable()->change();
+            $table->datetime('begining_time')->nullable()->change();
+            $table->datetime('ending_time')->nullable()->change();
+            $table->integer('user_id')->nullable()->change();
         });
     }
 

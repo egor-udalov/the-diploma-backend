@@ -14,7 +14,7 @@ class TaskTestSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('tasks')->insertOrIgnore([
+        DB::table('tasks')->insert([
             [
                 'name' => 'тестовое задание 1',
                 'user_id' => '1',

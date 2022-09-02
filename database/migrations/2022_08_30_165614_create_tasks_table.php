@@ -16,11 +16,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tasks', function (Blueprint $table) {
+            // $table->charset = 'utf8';
+            // $table->collation = 'utf8_general_ci';
             $table->id();
-            $table->string('name');
-            $table->datetime('begining_time');
-            $table->datetime('ending_time');
-            $table->integer('user_id');
+            $table->string('name')->nullable();
+            $table->datetime('begining_time')->nullable();
+            $table->datetime('ending_time')->nullable();
+            $table->integer('user_id')->nullable();
         });
     }
 

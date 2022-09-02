@@ -14,7 +14,7 @@ class UserTestSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
+        DB::table('users')->insertOrIgnore([
             [
                 'name' => 'пользователь 1',
                 'email' => 'test1@mail.ru',

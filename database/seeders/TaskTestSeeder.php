@@ -14,15 +14,21 @@ class TaskTestSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('tasks')->insert([
+        DB::table('tasks')->insertOrIgnore([
             [
                 'name' => 'тестовое задание 1',
+                'begining_time' => '2022-09-01 21:10:47',
+                'ending_time' => '2022-09-01 21:10:50',
                 'user_id' => '1',
             ],
             [
                 'name' => 'тестовое задание 2',
+                'begining_time' => '2022-09-01 21:10:47',
+                'ending_time' => '2022-09-01 21:10:50',
                 'user_id' => '2',
             ],
         ]);
     }
 }
+
+// 2022-09-01 21:10:47

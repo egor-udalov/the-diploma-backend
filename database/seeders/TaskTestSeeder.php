@@ -30,5 +30,3 @@ class TaskTestSeeder extends Seeder
         ]);
     }
 }
-
-// 2022-09-01 21:10:47

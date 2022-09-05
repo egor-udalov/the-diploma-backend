@@ -22,8 +22,8 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            TaskTestSeeder::class,
             UserTestSeeder::class,
+            TaskTestSeeder::class,    
         ]);
     }
 }

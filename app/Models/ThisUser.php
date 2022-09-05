@@ -9,7 +9,7 @@
 
         public function category()
         {
-            return $this->belongsTo(Task::class, 'user_id'); // или App\Models\Category вместо Category::class
+            return $this->belongsTo(Task::class, 'user_id'); 
         }
 
         // public function users()

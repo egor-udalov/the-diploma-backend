@@ -13,12 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('tasks', function (Blueprint $table) {
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->integer('id')->autoIncrement();
             $table->string('name')->nullable();
-            $table->string('email')->nullable();
+            $table->datetime('begining_time')->nullable();
+            $table->datetime('ending_time')->nullable();
+            // $table->integer('user_id')->nullable();
         });
     }
 
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('tasks');
     }
 };

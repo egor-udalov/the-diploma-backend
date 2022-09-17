@@ -18,4 +18,10 @@
 
         }
 
+        public function timeTrakerAction(){
+
+            return view('pages.time_traker');
+
+        }
+
     }

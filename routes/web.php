@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\IndexController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,10 +13,12 @@ use App\Http\Controllers\IndexController;
 |
 */
 
-
-
-Route::controller(IndexController::class)->group(function () {
-
-    Route::get('/', 'homeAction');
-    Route::get('/login', 'loginAction');
+Route::get('/', function () {
+    return view('welcome');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';

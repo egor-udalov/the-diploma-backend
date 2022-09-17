@@ -7,9 +7,9 @@
     {
         protected $table = 'tasks';
 
-        public function products()
+        public function users()
         {
-            return $this->hasMany(ThisUser::class, 'user_id');
+            return $this->hasMany(User::class, 'user_id');
         }
 
         // static function usersId()

@@ -509,15 +509,15 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="tables_basic.html" title="Basic Tables" data-filter-tags="tables basic tables">
-                                            <span class="nav-link-text" data-i18n="nav.tables_basic_tables">Basic Tables</span>
+                                        <a href="{{ route('tablesUsers') }}" title="Basic Tables" data-filter-tags="tables basic tables">
+                                            <span class="nav-link-text" data-i18n="nav.tables_basic_tables">Users</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <a href="tables_generate_style.html" title="Generate Table Style" data-filter-tags="tables generate table style">
                                             <span class="nav-link-text" data-i18n="nav.tables_generate_table_style">Generate Table Style</span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </li>
                             <li>
@@ -1695,7 +1695,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                 <div class="modal-body">
                                     <ul class="app-list w-auto h-auto p-0 text-left">
                                         <li>
-                                            <a href="intel_introduction.html" class="app-list-item text-white border-0 m-0">
+                                            <a href="{{ route('dashboard') }}" class="app-list-item text-white border-0 m-0">
                                                 <div class="icon-stack">
                                                     <i class="base base-7 icon-stack-3x opacity-100 color-primary-500 "></i>
                                                     <i class="base base-7 icon-stack-2x opacity-100 color-primary-300 "></i>

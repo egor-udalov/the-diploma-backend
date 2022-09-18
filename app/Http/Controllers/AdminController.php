@@ -8,16 +8,12 @@
         private $template = 'admin';
 
 		public function indexAction(){
-
-			$template = $this->template;
-
+            $template = $this->template;
 			return view('pages.admin.home', compact('template')); 
 		}
 
         public function tablesAction(){
-
-			$template = $this->template;
-
+            $template = $this->template;
 			return view('pages.admin.tables', compact('template')); 
 		}
     }

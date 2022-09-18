@@ -209,7 +209,7 @@
                                     <div class="d-flex flex-row px-3 pt-3 pb-2">
                                         <!-- profile photo : lazy loaded -->
                                         <span class="status status-danger">
-                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('assets/img/demo/avatars/avatar-j.png')"></span>
+                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('../assets/img/demo/avatars/avatar-j.png')"></span>
                                         </span>
                                         <!-- profile photo end -->
                                         <div class="ml-3">
@@ -256,7 +256,7 @@
                                     <div class="d-flex flex-row px-3 pt-3 pb-2">
                                         <!-- profile photo : lazy loaded -->
                                         <span class="status status-danger">
-                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('assets/img/demo/avatars/avatar-admin.png')"></span>
+                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('../assets/img/demo/avatars/avatar-admin.png')"></span>
                                         </span>
                                         <!-- profile photo end -->
                                         <div class="ml-3">

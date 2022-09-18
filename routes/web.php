@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::controller(AdminController::class)->group(function () {
+    Route::get('/admin', 'indexAction')->name('dashboard');
+    Route::get('/admin/tables', 'tablesAction')->name('tables');
+});//->middleware(['auth'])->name('pages.home'); //временно закомментиовано
+
 // Route::get('/', function () {
-//     return view('welcome');
-// });
+//     return view('pages.admin.home');
+// })->middleware(['auth'])->name('pages.home'); 
 
-Route::get('/', function () {
-    return view('pages.home');
-})->middleware(['auth'])->name('pages.home');
-
-require __DIR__.'/auth.php';
+require __DIR__.'/auth.php'; 

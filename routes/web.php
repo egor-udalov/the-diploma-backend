@@ -16,7 +16,8 @@ use App\Http\Controllers\AdminController;
 
 Route::controller(AdminController::class)->group(function () {
     Route::get('/admin', 'indexAction')->name('dashboard');
-    Route::get('/admin/tables', 'tablesAction')->name('tables');
+    Route::get('/admin/tables/users', 'tablesUsersAction')->name('tablesUsers');
+    Route::get('/admin/tables/usertasks', 'tablesTasksAction')->name('tablesTasks');
 });//->middleware(['auth'])->name('pages.home'); //временно закомментиовано
 
 // Route::get('/', function () {

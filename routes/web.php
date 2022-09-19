@@ -23,8 +23,7 @@ Route::controller(AdminController::class)->group(function () {
 
 Route::get('/', [IndexController::class, 'homeAction']);
 Route::controller(IndexController::class)->middleware(['auth'])->group(function () {
-    // Route::get('/', 'homeAction');
-    Route::get('/login', 'loginAction');
+    // Route::get('/login', 'loginAction'); 
     Route::get('/time_traker', 'timeTrakerAction');
     Route::get('/add_time', 'addTimeAction');
 });

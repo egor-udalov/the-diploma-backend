@@ -197,7 +197,19 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                             </a>
                         </form>
                     </div>
-
+                    <div>
+                        <a href="{{ route('register') }}"><button type="button" class="btn btn-light">Registration</button></a>
+                    </div>
+                    <div>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <x-dropdown-link class="btn btn-light" :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Log Out') }}
+                            </x-dropdown-link>
+                        </form> 
+                    </div>
                 </header>
                 <!-- END Page Header -->
                 <!-- BEGIN Page Content -->

@@ -18,4 +18,18 @@
 
         }
 
+        public function timeTrakerAction(){
+
+            return view('pages.time_traker');
+
+        }
+
+        public function addTimeAction(){
+
+            return view('pages.add_time');
+
+        }
+
+        
+
     }

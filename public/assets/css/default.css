@@ -1,0 +1,282 @@
+:root {
+    --flash-color:white;
+    --flash-success-color: #28a745;
+    --flash-notice-color: #1b1f23;
+    --flash-error-color:  #d73a49;
+}
+
+
+.flash {
+    padding:10px;
+}
+
+.flash-messages {
+    
+    width: auto;
+    margin-top: 10px;
+    bottom: 10px;
+    position: fixed;
+    max-width: 95%;
+}
+
+.flash-success {
+    background-color: var(--flash-success-color);
+    color: var(--flash-color);
+}
+
+
+.flash-error {
+    background-color: var(--flash-error-color);
+    color: var(--flash-color);
+}
+
+.flash-notice {
+    background-color: var(--flash-notice-color);
+    color: var(--flash-color);
+}
+
+.input-large {
+    width: 80%;
+}
+
+div.loadingspinner {
+    margin-top: 10px;
+    pointer-events: none;
+    width: 1.5em;
+    height: 1.5em;
+    border: 0.4em solid transparent;
+    border-color: var(--text-main);
+    border-top-color: var(--selection);
+    border-radius: 50%;
+    animation: loadingspin 1s linear infinite;
+}
+
+span.loadingspinner {
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    margin-top: 0px;
+    padding-top: 0;;
+    pointer-events: none;
+    width: 1.5em;
+    height: 1.5em;
+    border: 0.4em solid transparent;
+    border-color: var(--text-main);
+    border-top-color: var(--selection);
+    border-radius: 50%;
+    animation: loadingspin 1s linear infinite;
+}
+
+@keyframes loadingspin {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
+}
+
+.task-done, .task-done > a {
+    color: grey;
+    font-style:oblique;
+    text-decoration: none;
+
+}
+
+.action-links>a {
+    color: var(--text-main);
+    font-size: 0.90em;
+    padding: 4px;
+    margin-right: 4px;
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: var(--background-alt);
+}
+
+.action-links>a:hover {
+    background-color: var(--button-hover);
+}
+
+.action-links>a.large {
+    font-size: 1.2em;
+}
+
+.app-menu>a {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    padding: 4px;
+    margin-right: 4px;
+    text-decoration: none;
+    border-radius: 6px;
+    background-color: var(--background-alt);
+}
+
+.app-menu>a:hover {
+    background: var(--button-hover);
+}
+
+.app-menu> a.active {
+    color: var(--form-text);
+}
+
+table {
+    font-size: 1em;
+    margin-top: 10px;
+    border: 1px solid transparent;
+    
+}
+
+
+.button-small {
+    margin: 2px;
+    padding: 4px;
+    border:none;
+    font-size: 0.8em;
+}
+
+.button-small:focus {
+    margin: 2px;
+    padding: 4px;
+
+}
+
+.button-small:focus, a:focus {
+    box-shadow: none;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 767px) {
+
+
+    td > .action-links>a {
+        padding: 1px;
+    }
+
+    .xs-hide {
+        display: none;
+    
+    }
+}
+
+.td-overflow {
+    white-space: nowrap; 
+    overflow: hidden
+}
+
+.timer {
+    margin-top:8px;
+    /* display: none; */
+
+}
+
+.priority {
+    padding-right: 16px;
+    margin-right: 5px;
+}
+
+.priority-low {
+    background-color: #b1e8fd; 
+}
+
+.priority-minor {
+    background-color: #55d0db; 
+}
+
+.priority-normal {
+    background-color: #cef2ac; 
+}
+
+.priority-high {
+    background-color: #dcacf2; 
+}
+
+.priority-urgent {
+    background-color: #f0440b
+}
+
+.priority-done {
+    background-color: #eee;;
+}
+
+.page {
+    min-height: calc(100vh - 100px);
+}
+
+.footer {
+    background-color: var(--background-alt);
+
+}
+
+.clear {
+    padding: 5px;
+}
+
+.pagination {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pagination-links {
+
+    padding: 5px;
+    font-weight: 900;
+    border: 1px solid var(--focus);
+    margin-top: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+
+}
+
+.pagination-current {
+    background-color: var(--background);
+}
+
+.logo {
+    padding-bottom: 20px;
+}
+
+.width-35 {
+    width: 35%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+#timer {
+    display: none;
+}
+
+#timer_display {
+    padding:4px; 
+    float: left; 
+    min-width:80px; 
+}
+
+#captcha {
+    cursor: pointer;
+}
+
+.error {
+    color: var(--flash-error-color);
+}
+
+#timer_toggle:hover {
+    /* background-color: unset !important; */
+    background-color: var(--background-alt);
+}
+
+.button-timer {
+    background-color: var(--background) !important;
+}
+
+body {
+    overflow: scroll; /* Show scrollbars */
+  }

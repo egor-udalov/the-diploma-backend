@@ -24,4 +24,12 @@
 
         }
 
+        public function addTimeAction(){
+
+            return view('pages.add_time');
+
+        }
+
+        
+
     }

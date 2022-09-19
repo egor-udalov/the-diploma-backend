@@ -22,4 +22,5 @@ Route::controller(IndexController::class)->group(function () {
     Route::get('/', 'homeAction');
     Route::get('/login', 'loginAction');
     Route::get('/time_traker', 'timeTrakerAction');
+    Route::get('/add_time', 'addTimeAction');
 });

@@ -197,9 +197,9 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                             </a>
                         </form>
                     </div>
-                    <div>
+                    <!-- <div>
                         <a href="{{ route('register') }}"><button type="button" class="btn btn-light">Registration / Log In</button></a>
-                    </div>
+                    </div> -->
                     <div>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf

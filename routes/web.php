@@ -21,9 +21,10 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/admin/tables/usertasks', 'tablesTasksAction')->name('tablesTasks');
 });
 
-Route::get('/', [IndexController::class, 'homeAction']);
+// Route::get('/', [IndexController::class, 'homeAction']);
 Route::controller(IndexController::class)->middleware(['auth'])->group(function () {
     // Route::get('/login', 'loginAction'); 
+    Route::get('/', 'homeAction'); 
     Route::get('/time_traker', 'timeTrakerAction');
     Route::get('/add_time', 'addTimeAction');
 });

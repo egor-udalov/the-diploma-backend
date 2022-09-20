@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.default')
 
-<head>
-    <meta charset="UTF-8">
 
+@section('head')
+    <title>Add Time</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>PPM</title>
+    
     <meta name="description" content="PPM">
     <meta name="theme-color" content="#ffffff">
 
@@ -21,9 +19,10 @@
             GlobalEvents
         } from 'assets/js/global_events.js?version=1.3.3';
     </script>
-</head>
+    
+@endsection('head')
 
-<body>
+@section('content')
     <div class="page">
 
         <div class="app-menu">
@@ -44,16 +43,16 @@
         <div class="flash-messages">
 
         </div>
-        <h3>Add time: 123</h3>
+        <h3>Add time:</h3>
 
-        <p>Project: <a href="/project/view/104">123</a></p>
+        <p>Project: <a href="#"></a></p>
 
-        <form id="time_add" name="time_add" method="post">
+        <form id="time_add" name="time_add" method="get">
             <label for="minutes">Time used. Valid time input (hh:mm), e.g. 1:10 or 0:15 *</label>
-            <input id="minutes" type="text" name="minutes" placeholder="Time used" value="">
+            <input id="minutes" type="text" name="all_time" placeholder="Time used" value="">
 
             <label for="begin_data">Date</label>
-            <input id="begin_date" type="date" name="begin_date" placeholder="Pick date" value="2022-09-19">
+            <input id="begin_date" type="date" name="all_time" placeholder="Pick date" value="2022-09-19">
 
             <input id="task_id" type="hidden" name="task_id" value="616">
 
@@ -161,7 +160,4 @@
     <div class="footer">
         <hr />
     </div>
-
-</body>
-
-</html>
+@endsection('content')

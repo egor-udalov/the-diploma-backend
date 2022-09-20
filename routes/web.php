@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\TasksController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,8 @@ use App\Http\Controllers\IndexController;
 
 Route::controller(AdminController::class)->group(function () {
     Route::get('/admin', 'indexAction')->name('dashboard');
-    Route::get('/admin/tables/users', 'tablesUsersAction')->name('tablesUsers');
-    Route::get('/admin/tables/usertasks', 'tablesTasksAction')->name('tablesTasks');
+    Route::get('/admin/users', 'tablesUsersAction')->name('tablesUsers');
+    Route::get('/admin/usertasks', 'tablesTasksAction')->name('tablesTasks');
 });
 
 // Route::get('/', [IndexController::class, 'homeAction']);
@@ -34,4 +35,7 @@ Route::controller(IndexController::class)->middleware(['auth'])->group(function 
 // })->middleware(['auth'])->name('pages.home'); 
 
 require __DIR__.'/auth.php'; 
+
+Route::get('/time_traker/post', [TasksController::class, 'addProject']);
+Route::get('/time_traker/post', [TasksController::class, 'addTime']);
 

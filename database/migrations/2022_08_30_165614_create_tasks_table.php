@@ -17,9 +17,8 @@ return new class extends Migration
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->integer('id')->autoIncrement();
-            $table->string('name')->nullable();
-            $table->datetime('begining_time')->nullable();
-            $table->datetime('ending_time')->nullable();
+            $table->string('project_name')->nullable();
+            $table->datetime('all_time')->nullable();
             // $table->integer('user_id')->nullable();
         });
     }
